@@ -1,9 +1,10 @@
+from typing import Optional
 from pydantic import BaseModel
 
 # Base schema with common attributes
 class ItemBase(BaseModel):
     name: str
-    description: str = None
+    description: Optional[str] = None
 
 # Schema for creating a new item
 class ItemCreate(ItemBase):
